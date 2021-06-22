@@ -24,9 +24,8 @@ def is_empty():
         return False
 
 def init():
-    global front, rear
+    global rear
 
-    front = -1
     rear = -1
     queue.clear()
 
