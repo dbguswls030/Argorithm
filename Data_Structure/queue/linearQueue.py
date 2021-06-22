@@ -14,8 +14,8 @@ def dequeue():
 def peek():
     return queue[0]
 
-
-
+def size():
+    return len(queue)
 
 def is_empty():
     if rear == -1:
@@ -45,5 +45,6 @@ print(peek())
 enqueue(5)
 print(queue)
 print(peek())
+print(size())
 init()
 print(queue)
