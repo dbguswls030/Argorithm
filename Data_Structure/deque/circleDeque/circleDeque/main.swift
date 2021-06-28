@@ -12,18 +12,18 @@ import Foundation
 func initDeque(){
     front = -1
     rear = -1
-    linearDeque.removeAll()
+    circleDeque.removeAll()
 }
 func addFront(_ x: Int){
     if isFull()==false{
         if isEmpty()==true{
-            linearDeque.append(x)
+            circleDeque.append(x)
             front = (front+1) % MAX_DEQUE_SIZE
             rear = (rear+1) % MAX_DEQUE_SIZE
         }
         else{
             front = (front-1+MAX_DEQUE_SIZE) % MAX_DEQUE_SIZE
-            linearDeque.insert(x, at: front)
+            circleDeque.insert(x, at: front)
             rear = (rear+1) % MAX_DEQUE_SIZE
         }
     }
@@ -31,28 +31,28 @@ func addFront(_ x: Int){
 func addRear(_ x: Int){
     if isFull() == false{
         rear=(rear+1) % MAX_DEQUE_SIZE
-        linearDeque.append(x)
+        circleDeque.append(x)
     }
     
 }
 func getFront() -> Int{
     if isEmpty() == false{
-        return linearDeque[front]
+        return circleDeque[front]
     }else {
         return -1
     }
 }
 func getRear() -> Int{
     if isEmpty() == false{
-        return linearDeque[rear]
+        return circleDeque[rear]
     }else{
         return -1
     }
 }
 func deleteFront() -> Int{
     if isEmpty() == false{
-        front = (front-1+linearDeque.count-1) % linearDeque.count
-        return linearDeque.remove(at: front)
+        front = (front-1+circleDeque.count-1) % circleDeque.count
+        return circleDeque.remove(at: front)
     }
     else{
         return -1
@@ -61,13 +61,13 @@ func deleteFront() -> Int{
 func deleteRear()->Int{
     if isEmpty() == false{
         rear = (rear-1) % MAX_DEQUE_SIZE
-        return linearDeque.remove(at: rear)
+        return circleDeque.remove(at: rear)
     }else{
         return -1
     }
 }
 func isEmpty() -> Bool{
-    if linearDeque.isEmpty{
+    if circleDeque.isEmpty{
         print("deque is empty")
         return true
     }else{
@@ -83,11 +83,11 @@ func isFull() -> Bool{
     }
 }
 func size() -> Int{
-    return linearDeque.count
+    return circleDeque.count
 }
 
 let MAX_DEQUE_SIZE = 10
-var linearDeque:Array<Int> = []
+var circleDeque:Array<Int> = []
 var front = 0
 var rear = 0
 
@@ -95,20 +95,20 @@ var rear = 0
 
 
 addFront(1)
-print(linearDeque)
+print(circleDeque)
 addRear(9)
-print(linearDeque)
+print(circleDeque)
 addFront(2)
-print(linearDeque)
+print(circleDeque)
 addRear(10)
-print(linearDeque)
+print(circleDeque)
 print(deleteRear())
-print(linearDeque)
+print(circleDeque)
 print(deleteRear())
-print(linearDeque)
+print(circleDeque)
 print(deleteFront())
-print(linearDeque)
+print(circleDeque)
 addRear(20)
-print(linearDeque)
+print(circleDeque)
 print(deleteFront())
-print(linearDeque)
+print(circleDeque)
