@@ -61,7 +61,7 @@ func searchPath(){
     }
 }
 
-func readQueue(){
+func readStack(){
     if stack.count != 0{
         cur.x = stack[stack.count-1].x
         cur.y = stack[stack.count-1].y
@@ -78,7 +78,7 @@ var cur = Location(0, 1)
 
 while map[cur.y][cur.x] != "x"{
     searchPath()
-    readQueue()
+    readStack()
 }
 
 print(map[cur.y][cur.x])
