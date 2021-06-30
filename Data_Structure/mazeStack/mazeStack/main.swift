@@ -26,7 +26,7 @@ struct Location {
 }
 
 
-func researchPath(){
+func searchPath(){
     
     print(cur.y, cur.x)
 
@@ -77,7 +77,7 @@ var cur = Location(0, 1)
 
 
 while map[cur.y][cur.x] != "x"{
-    researchPath()
+    searchPath()
     readQueue()
 }
 
