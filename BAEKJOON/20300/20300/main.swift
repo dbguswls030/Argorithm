@@ -7,18 +7,18 @@
 
 import Foundation
 
-var N = Int(readLine()!)!
+var N = Int(readLine()!)! //아령 개수
 
-var t = readLine()!.components(separatedBy: " ").map() {Int($0)!}
+var t = readLine()!.components(separatedBy: " ").map() {Int($0)!} // 아령들
 
-var M : Int
+var M: Int //최소 근손실
 
 t.sort(by: <) //오름차순 정렬
+print(t)
 
-
-if t.count % 2 == 0{
-    M = t[t.count-1]
-}else{
+if t.count % 2 == 0{             // 아령이 짝수일 때
+    M = t[t.count-1]             // 근손실이 제일 큰 아령을 기준
+}else{                           // 아령이 홀수 일 때
     M = t.removeLast()
 }
 
