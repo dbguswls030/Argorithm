@@ -16,7 +16,9 @@ import Foundation
 //
 //
 //    divide(0, list.count-1)
-//    print(list)
+//    for i in list{
+          print(i)
+      }
 //
 //    func divide(_ left: Int, _ right: Int){
 //        if left < right{
@@ -70,7 +72,9 @@ func solution(){
         arr.append(Int(readLine()!)!)
     }
     
-    print(divide(arr))
+    for i in divide(arr){
+        print(i)
+    }
     
     
     func divide(_ list: [Int]) -> [Int]{
