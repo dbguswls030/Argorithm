@@ -31,9 +31,7 @@ func solution(_ places:[[String]]) -> [Int] {
                 let y = j+dy[index]
                 
                 if x > -1, x < 5, y > -1, y < 5{
-                    if waitingRoom[x][y] == "X"{
-                        continue
-                    }else if waitingRoom[x][y] == "P" || waitingRoom[x][y] == "OO"{
+                    if waitingRoom[x][y] == "P" || waitingRoom[x][y] == "OO"{
                         return 0
                     }else if waitingRoom[x][y] == "O"{
                         waitingRoom[x][y] = waitingRoom[x][y] + "O"
