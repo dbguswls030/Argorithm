@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// 반복문 도중에 배열 삭제하면 안 됨
 func solution(_ n:Int, _ lost:[Int], _ reserve:[Int]) -> Int {
     var result = n - lost.count
     var lost = lost
