@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "335AF2A7-087E-4B9B-A4E4-981A729D3F03"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8A9D5CFA-BF17-485B-86F3-493670D6704E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "11659/main.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "solution()"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "8A9D5CFA-BF17-485B-86F3-493670D6704E - c0433ebf459b9ba8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_1659.solution() -&gt; ()"
+                  moduleName = "11659"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryuhyeonjin/Desktop/swift/algorithm/baekjoon/11659/11659/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "1708">
+               </Location>
+               <Location
+                  uuid = "8A9D5CFA-BF17-485B-86F3-493670D6704E - c0433ebf459b9ba8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_1659.solution() -&gt; ()"
+                  moduleName = "11659"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryuhyeonjin/Desktop/swift/algorithm/baekjoon/11659/11659/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "1712">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F235E392-0F6C-4FC4-A1B3-1ACE60CCE10B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "11659/main.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "solution()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
