@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "1D06F822-85DD-4030-B4E2-3DB880694CC6"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DD94E033-D72F-452A-86F0-CDBD9B0D0831"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x1111;&#x1161;&#x1100;&#x116c;&#x1103;&#x116c;&#x110c;&#x1175; &#x110b;&#x1161;&#x11ad;&#x110b;&#x1173;&#x11ab; &#x1100;&#x1165;&#x11ab;&#x1106;&#x116e;&#x11af;/main.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "7"
+            endingLineNumber = "7"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
