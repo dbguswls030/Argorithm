@@ -13,60 +13,11 @@
 
 import Foundation
 
-//func solution(_ n:Int, _ paths:[[Int]], _ gates:[Int], _ summits:[Int]) -> [Int] {
-//    var dp = Array(repeating: (0, 0), count: n+1)
-//    var map = Array(repeating: [(Int,Int)](), count: n+1)
-//    var intensity = Array(repeating: 10000001, count: n+1)
-//    var result = [[Int]]()
-//
-//    for path in paths {
-//        let i = path[0]
-//        let j = path[1]
-//        let w = path[2]
-//        map[i].append((j,w))
-//        if !gates.contains(i), !summits.contains(j){
-//            map[j].append((i,w))
-//        }
-//    }
-//
-//    var gates = gates
-//
-//    func ddfs(cur: Int, end: Int, intensity: Int, visited: [Bool]){
-//        var visited = visited
-//        visited[cur] = true
-//        if cur == end{
-//            result.append([end, intensity])
-//            return
-//        }
-//        if gates.contains(cur){
-//            return
-//        }
-//        if cur != end, summits.contains(cur){
-//            return
-//        }
-//        if dp[cur] == (0, 0){
-//            dp[cur] = map[cur].filter{visited[$0.0] == false}.min { $0.1 < $1.1 }!
-//        }
-//        print("cur : \(cur), list : \(map[cur]), intensity: \(intensity)")
-//        print(dp[cur])
-//        ddfs(cur: dp[cur].0, end: end, intensity: max(intensity, dp[cur].1), visited: visited)
-//    }
-//
-//    while !gates.isEmpty{
-//        let cur = gates.removeFirst()
-//        for summit in summits {
-//            print("cur : \(cur), summit : \(summit)")
-//            ddfs(cur: cur, end: summit, intensity: 0, visited: Array(repeating: false, count: n+1))
-//        }
-//    }
-//    print(result)
-//    let answer = result.max { $0[1] == $1[1] ? $0[0] > $1[0] : $0[1] > $1[1]}!
-//
-//    return answer
-//}
 func solution(_ n:Int, _ paths:[[Int]], _ gates:[Int], _ summits:[Int]) -> [Int] {
     var graph = Array(repeating: [(Int, Int)](), count: n+1)
     var intensity = Array(repeating: 10000001, count: n+1)
+    var gates = Set(gates)
+    var summits = Set(summits)
     var queue = [Int]()
     for path in paths {
         let i = path[0]
@@ -107,10 +58,10 @@ func solution(_ n:Int, _ paths:[[Int]], _ gates:[Int], _ summits:[Int]) -> [Int]
     }
     return [mNode, mW]
 }
-func isGate(node: Int, gates: [Int]) -> Bool{
+func isGate(node: Int, gates: Set<Int>) -> Bool{
     return gates.contains(node) ? true : false
 }
-func isSummit(node: Int, summits: [Int])-> Bool{
+func isSummit(node: Int, summits: Set<Int>)-> Bool{
     return summits.contains(node) ? true : false
 }
 print(solution(6, [[1, 2, 3], [2, 3, 5], [2, 4, 2], [2, 5, 4], [3, 4, 4], [4, 5, 3], [4, 6, 1], [5, 6, 1]], [1, 3], [5]))
