@@ -14,141 +14,104 @@
 import Foundation
 
 //func solution(_ n:Int, _ paths:[[Int]], _ gates:[Int], _ summits:[Int]) -> [Int] {
-//    var dp = Array(repeating: Array(repeating: 0, count: n+1), count: n+1)
-//    var map = Array(repeating: [Int](), count: n+1)
+//    var dp = Array(repeating: (0, 0), count: n+1)
+//    var map = Array(repeating: [(Int,Int)](), count: n+1)
+//    var intensity = Array(repeating: 10000001, count: n+1)
 //    var result = [[Int]]()
+//
 //    for path in paths {
 //        let i = path[0]
 //        let j = path[1]
 //        let w = path[2]
-//        dp[i][j] = w
-//        dp[j][i] = w
-//        map[i].append(j)
-//        map[j].append(i)
+//        map[i].append((j,w))
+//        if !gates.contains(i), !summits.contains(j){
+//            map[j].append((i,w))
+//        }
 //    }
 //
 //    var gates = gates
 //
-//    func dfs(cur: Int, start: Int, des: Int, intensity: Int, visited: [Bool], backFlag: Bool){
-////        print("cur: \(cur), start: \(start), des: \(des), intensity: \(intensity), backFlag : \(backFlag)")
-//
+//    func ddfs(cur: Int, end: Int, intensity: Int, visited: [Bool]){
 //        var visited = visited
-//        var intensity = intensity
-//
-//
-//        if backFlag == false{
-//            if cur == des{
-//                visited = Array(repeating: false, count: n+1)
-//                visited[cur] = true
-//                dfs(cur: des, start: des, des: start, intensity: intensity, visited: visited, backFlag: true)
-//                return
-//            }
-//        }else{
-//            if cur == start{
-////                print("cur == start !!")
-//                result.append([start, intensity])
-//                return
-//            }
-//        }
-//
-//        if cur != des, summits.contains(cur){
+//        visited[cur] = true
+//        if cur == end{
+//            result.append([end, intensity])
 //            return
 //        }
-//
 //        if gates.contains(cur){
-////            print("miss gate")
 //            return
 //        }
-//
-//
-//        for i in map[cur]{
-//            if visited[i] == false{
-//                visited[i] = true
-//                if intensity < dp[cur][i]{
-//                    dfs(cur: i, start: start, des: des, intensity: dp[cur][i], visited: visited, backFlag: backFlag)
-//                }else{
-//                    dfs(cur: i, start: start, des: des, intensity: intensity, visited: visited, backFlag: backFlag)
-//                }
-//
-//            }
+//        if cur != end, summits.contains(cur){
+//            return
 //        }
+//        if dp[cur] == (0, 0){
+//            dp[cur] = map[cur].filter{visited[$0.0] == false}.min { $0.1 < $1.1 }!
+//        }
+//        print("cur : \(cur), list : \(map[cur]), intensity: \(intensity)")
+//        print(dp[cur])
+//        ddfs(cur: dp[cur].0, end: end, intensity: max(intensity, dp[cur].1), visited: visited)
 //    }
 //
 //    while !gates.isEmpty{
 //        let cur = gates.removeFirst()
 //        for summit in summits {
-//            var visited = Array(repeating: false, count: n+1)
-////            print("cur : \(cur), summit: \(summit)")
-//            visited[cur] = true
-//            dfs(cur: cur, start: cur, des: summit, intensity: 0, visited: visited, backFlag: false)
+//            print("cur : \(cur), summit : \(summit)")
+//            ddfs(cur: cur, end: summit, intensity: 0, visited: Array(repeating: false, count: n+1))
 //        }
 //    }
-//
+//    print(result)
 //    let answer = result.max { $0[1] == $1[1] ? $0[0] > $1[0] : $0[1] > $1[1]}!
 //
 //    return answer
 //}
 func solution(_ n:Int, _ paths:[[Int]], _ gates:[Int], _ summits:[Int]) -> [Int] {
-    var dp = Array(repeating: Array(repeating: 0, count: n+1), count: n+1)
-    var map = Array(repeating: [Int](), count: n+1)
-    var result = [[Int]]()
+    var graph = Array(repeating: [(Int, Int)](), count: n+1)
+    var intensity = Array(repeating: 10000001, count: n+1)
+    var queue = [Int]()
     for path in paths {
         let i = path[0]
         let j = path[1]
         let w = path[2]
-        dp[i][j] = w
-        dp[j][i] = w
-        map[i].append(j)
-        map[j].append(i)
+        if isGate(node: i, gates: gates) || isSummit(node: j, summits: summits){
+            graph[i].append((j, w))
+        }else if isGate(node: j, gates: gates) || isSummit(node: i, summits: summits){
+            graph[j].append((i,w))
+        }else{
+            graph[i].append((j, w))
+            graph[j].append((i,w))
+        }
+    }
+    for gate in gates {
+        queue.append(gate)
+        intensity[gate] = 0
     }
     
-    var gates = gates
-   
-    func dfs(cur: Int, start: Int, des: Int, intensity: Int, visited: [Bool]){
-//        print("cur: \(cur), start: \(start), des: \(des), intensity: \(intensity), backFlag : \(backFlag)")
-    
-        var visited = visited
-        var intensity = intensity
-       
-        if cur == des{
-            result.append([des, intensity])
-            return
-        }
-        
-        if cur != des, summits.contains(cur){
-            return
-        }
-        
-        if gates.contains(cur){
-//            print("miss gate")
-            return
-        }
-       
-        for i in map[cur]{
-            if visited[i] == false{
-                visited[i] = true
-                if intensity < dp[cur][i]{
-                    dfs(cur: i, start: start, des: des, intensity: dp[cur][i], visited: visited)
-                }else{
-                    dfs(cur: i, start: start, des: des, intensity: intensity, visited: visited)
-                }
+    while !queue.isEmpty{
+        let node = queue.removeFirst()
+        for nnode in graph[node]{
+            let m = max(intensity[node], nnode.1)
+            if intensity[nnode.0] > m{
+                intensity[nnode.0] = m
+                queue.append((nnode.0))
             }
         }
     }
     
-    while !gates.isEmpty{
-        let cur = gates.removeFirst()
-        for summit in summits {
-            var visited = Array(repeating: false, count: n+1)
-//            print("cur : \(cur), summit: \(summit)")
-            visited[cur] = true
-            dfs(cur: cur, start: cur, des: summit, intensity: 0, visited: visited)
+    var mNode = 10000001
+    var mW = 10000001
+    for summit in summits.sorted() {
+        if intensity[summit] < mW{
+            mNode = summit
+            mW = intensity[summit]
         }
     }
-
-    let answer = result.max { $0[1] == $1[1] ? $0[0] > $1[0] : $0[1] > $1[1]}!
-    
-    return answer
+    return [mNode, mW]
+}
+func isGate(node: Int, gates: [Int]) -> Bool{
+    return gates.contains(node) ? true : false
+}
+func isSummit(node: Int, summits: [Int])-> Bool{
+    return summits.contains(node) ? true : false
 }
 print(solution(6, [[1, 2, 3], [2, 3, 5], [2, 4, 2], [2, 5, 4], [3, 4, 4], [4, 5, 3], [4, 6, 1], [5, 6, 1]], [1, 3], [5]))
 print(solution(7, [[1, 4, 4], [1, 6, 1], [1, 7, 3], [2, 5, 2], [3, 7, 4], [5, 6, 6]], [1], [2, 3, 4]))
