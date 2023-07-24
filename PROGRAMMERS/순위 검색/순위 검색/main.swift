@@ -10,43 +10,56 @@ import Foundation
 func solution(_ info:[String], _ query:[String]) -> [Int] {
     var applicants = [[String]]()
     var querys = [[String]]()
-    var result = Array(repeating: 0, count: query.count)
+    var dict = [String: [Int]]()
+    var result = [Int]()
     for i in info{
-        applicants.append(i.split(separator: " ").map{String($0)})
+        let applicant = i.split(separator: " ").map{String($0)}
+        let lang = [applicant[0], "-"]
+        let pos = [applicant[1], "-"]
+        let career = [applicant[2], "-"]
+        let soul = [applicant[3], "-"]
+        let point = Int(applicant[4])!
+        for l in lang{
+            for p in pos{
+                for c in career{
+                    for s in soul{
+                        if (dict["\(l)\(p)\(c)\(s)"] != nil){
+                            dict["\(l)\(p)\(c)\(s)"]?.append(point)
+                        }else{
+                            dict["\(l)\(p)\(c)\(s)"] = [point]
+                        }
+                    }
+                }
+            }
+        }
     }
+    
+    dict.keys.forEach{ dict[$0]?.sort(by: <)}
+    
+//    print(dict)
+    
     for (offset, i) in query.enumerated(){
         let q = i.split(separator: " ").map{String($0)}
-//        print(q)
-        for applicant in applicants {
-            let lang = applicant[0]
-            let pos = applicant[1]
-            let career = applicant[2]
-            let soul = applicant[3]
-            let point = applicant[4]
-            if lang != q[0]{
-                if q[0] != "-"{
-                    continue
+
+        let key = "\(q[0])\(q[2])\(q[4])\(q[6])"
+        let score = Int(q[7])!
+        
+        if let v = dict[key]{
+            var left = 0
+            var right = v.count - 1
+            var mid = 0
+            
+            while left <= right{
+                mid = (left + right) / 2
+                if v[mid] < score{
+                    left = mid + 1
+                }else{
+                    right = mid - 1
                 }
             }
-            if pos != q[2]{
-                if q[2] != "-"{
-                    continue
-                }
-            }
-            if career != q[4]{
-                if q[4] != "-"{
-                    continue
-                }
-            }
-            if soul != q[6]{
-                if q[6] != "-"{
-                    continue
-                }
-            }
-            if Int(point)! < Int(q[7])!{
-                continue
-            }
-            result[offset] += 1
+            result.append(v.count - left)
+        }else{
+            result.append(0)
         }
     }
     return result
