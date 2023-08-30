@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "5A050100-6292-44DC-9508-42BD143BABB3"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "82F243D7-B959-4CC5-BD9D-A0B0B3450C57"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x110b;&#x1163;&#x11bc;&#x1100;&#x116e;&#x11bc;&#x1103;&#x1162;&#x1112;&#x116c;/main.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "bt(s:apeach:lion:index:lionScore:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "26ADD270-D38A-448A-910F-4BBD1624A13B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x110b;&#x1163;&#x11bc;&#x1100;&#x116e;&#x11bc;&#x1103;&#x1162;&#x1112;&#x116c;/main.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "bt(s:apeach:lion:index:lionScore:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "26ADD270-D38A-448A-910F-4BBD1624A13B - 56e62f171407272d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "bt(s: Swift.Int, apeach: Swift.Int, lion: Swift.Int, index: Swift.Int, lionScore: Swift.Array&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "&#x110b;&#x1163;&#x11bc;&#x1100;&#x116e;&#x11bc;&#x1103;&#x1162;&#x1112;&#x116c;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryuhyeonjin/Desktop/swift/algorithm/programmers/%E1%84%8B%E1%85%A3%E1%86%BC%E1%84%80%E1%85%AE%E1%86%BC%E1%84%83%E1%85%A2%E1%84%92%E1%85%AC/%E1%84%8B%E1%85%A3%E1%86%BC%E1%84%80%E1%85%AE%E1%86%BC%E1%84%83%E1%85%A2%E1%84%92%E1%85%AC/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "1520">
+               </Location>
+               <Location
+                  uuid = "26ADD270-D38A-448A-910F-4BBD1624A13B - 56e62f171407272d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "bt(s: Swift.Int, apeach: Swift.Int, lion: Swift.Int, index: Swift.Int, lionScore: Swift.Array&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "&#x110b;&#x1163;&#x11bc;&#x1100;&#x116e;&#x11bc;&#x1103;&#x1162;&#x1112;&#x116c;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryuhyeonjin/Desktop/swift/algorithm/programmers/%E1%84%8B%E1%85%A3%E1%86%BC%E1%84%80%E1%85%AE%E1%86%BC%E1%84%83%E1%85%A2%E1%84%92%E1%85%AC/%E1%84%8B%E1%85%A3%E1%86%BC%E1%84%80%E1%85%AE%E1%86%BC%E1%84%83%E1%85%A2%E1%84%92%E1%85%AC/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "1596">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A016536F-4C7D-4D10-9894-00B46A7B857E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x110b;&#x1163;&#x11bc;&#x1100;&#x116e;&#x11bc;&#x1103;&#x1162;&#x1112;&#x116c;/main.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "bt(s:apeach:lion:index:lionScore:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "A016536F-4C7D-4D10-9894-00B46A7B857E - 56e62f17140724a1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "bt(s: Swift.Int, apeach: Swift.Int, lion: Swift.Int, index: Swift.Int, lionScore: Swift.Array&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "&#x110b;&#x1163;&#x11bc;&#x1100;&#x116e;&#x11bc;&#x1103;&#x1162;&#x1112;&#x116c;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryuhyeonjin/Desktop/swift/algorithm/programmers/%E1%84%8B%E1%85%A3%E1%86%BC%E1%84%80%E1%85%AE%E1%86%BC%E1%84%83%E1%85%A2%E1%84%92%E1%85%AC/%E1%84%8B%E1%85%A3%E1%86%BC%E1%84%80%E1%85%AE%E1%86%BC%E1%84%83%E1%85%A2%E1%84%92%E1%85%AC/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "1828">
+               </Location>
+               <Location
+                  uuid = "A016536F-4C7D-4D10-9894-00B46A7B857E - 56e62f17140724a1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "bt(s: Swift.Int, apeach: Swift.Int, lion: Swift.Int, index: Swift.Int, lionScore: Swift.Array&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "&#x110b;&#x1163;&#x11bc;&#x1100;&#x116e;&#x11bc;&#x1103;&#x1162;&#x1112;&#x116c;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryuhyeonjin/Desktop/swift/algorithm/programmers/%E1%84%8B%E1%85%A3%E1%86%BC%E1%84%80%E1%85%AE%E1%86%BC%E1%84%83%E1%85%A2%E1%84%92%E1%85%AC/%E1%84%8B%E1%85%A3%E1%86%BC%E1%84%80%E1%85%AE%E1%86%BC%E1%84%83%E1%85%A2%E1%84%92%E1%85%AC/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "1904">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6CD45AEC-5484-42A2-93A6-7C200718FBF2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x110b;&#x1163;&#x11bc;&#x1100;&#x116e;&#x11bc;&#x1103;&#x1162;&#x1112;&#x116c;/main.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "bt(s:apeach:lion:index:lionScore:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
