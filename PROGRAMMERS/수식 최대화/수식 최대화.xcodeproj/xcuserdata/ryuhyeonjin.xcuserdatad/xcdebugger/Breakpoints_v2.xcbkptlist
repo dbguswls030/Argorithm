@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "5C6ABC55-F390-4806-9F5C-CBB54A3BB442"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AEAAE646-ECBA-4579-9FE1-CCA9CB95C29A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x1109;&#x116e;&#x1109;&#x1175;&#x11a8; &#x110e;&#x116c;&#x1103;&#x1162;&#x1112;&#x116a;/main.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "calc(list:oper:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "AEAAE646-ECBA-4579-9FE1-CCA9CB95C29A - e399c73aab94778e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "calc(list: Swift.Array&lt;Swift.String&gt;, oper: Swift.String) -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "&#x1109;&#x116e;&#x1109;&#x1175;&#x11a8; &#x110e;&#x116c;&#x1103;&#x1162;&#x1112;&#x116a;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryuhyeonjin/Desktop/swift/algorithm/programmers/%E1%84%89%E1%85%AE%E1%84%89%E1%85%B5%E1%86%A8%20%E1%84%8E%E1%85%AC%E1%84%83%E1%85%A2%E1%84%92%E1%85%AA/%E1%84%89%E1%85%AE%E1%84%89%E1%85%B5%E1%86%A8%20%E1%84%8E%E1%85%AC%E1%84%83%E1%85%A2%E1%84%92%E1%85%AA/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "1740">
+               </Location>
+               <Location
+                  uuid = "AEAAE646-ECBA-4579-9FE1-CCA9CB95C29A - e399c73aab947751"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "calc(list: Swift.Array&lt;Swift.String&gt;, oper: Swift.String) -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "&#x1109;&#x116e;&#x1109;&#x1175;&#x11a8; &#x110e;&#x116c;&#x1103;&#x1162;&#x1112;&#x116a;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryuhyeonjin/Desktop/swift/algorithm/programmers/%E1%84%89%E1%85%AE%E1%84%89%E1%85%B5%E1%86%A8%20%E1%84%8E%E1%85%AC%E1%84%83%E1%85%A2%E1%84%92%E1%85%AA/%E1%84%89%E1%85%AE%E1%84%89%E1%85%B5%E1%86%A8%20%E1%84%8E%E1%85%AC%E1%84%83%E1%85%A2%E1%84%92%E1%85%AA/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "1776">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "011903A5-1FCE-4BBE-95DE-D70ECFE3B020"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x1109;&#x116e;&#x1109;&#x1175;&#x11a8; &#x110e;&#x116c;&#x1103;&#x1162;&#x1112;&#x116a;/main.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "calc(list:oper:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "011903A5-1FCE-4BBE-95DE-D70ECFE3B020 - e399c73aab94760a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "calc(list: Swift.Array&lt;Swift.String&gt;, oper: Swift.String) -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "&#x1109;&#x116e;&#x1109;&#x1175;&#x11a8; &#x110e;&#x116c;&#x1103;&#x1162;&#x1112;&#x116a;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryuhyeonjin/Desktop/swift/algorithm/programmers/%E1%84%89%E1%85%AE%E1%84%89%E1%85%B5%E1%86%A8%20%E1%84%8E%E1%85%AC%E1%84%83%E1%85%A2%E1%84%92%E1%85%AA/%E1%84%89%E1%85%AE%E1%84%89%E1%85%B5%E1%86%A8%20%E1%84%8E%E1%85%AC%E1%84%83%E1%85%A2%E1%84%92%E1%85%AA/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "1652">
+               </Location>
+               <Location
+                  uuid = "011903A5-1FCE-4BBE-95DE-D70ECFE3B020 - e399c73aab9477ed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "calc(list: Swift.Array&lt;Swift.String&gt;, oper: Swift.String) -&gt; Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "&#x1109;&#x116e;&#x1109;&#x1175;&#x11a8; &#x110e;&#x116c;&#x1103;&#x1162;&#x1112;&#x116a;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryuhyeonjin/Desktop/swift/algorithm/programmers/%E1%84%89%E1%85%AE%E1%84%89%E1%85%B5%E1%86%A8%20%E1%84%8E%E1%85%AC%E1%84%83%E1%85%A2%E1%84%92%E1%85%AA/%E1%84%89%E1%85%AE%E1%84%89%E1%85%B5%E1%86%A8%20%E1%84%8E%E1%85%AC%E1%84%83%E1%85%A2%E1%84%92%E1%85%AA/main.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "1688">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
