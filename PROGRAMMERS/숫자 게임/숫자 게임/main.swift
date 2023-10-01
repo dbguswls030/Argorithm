@@ -6,18 +6,24 @@
 //
 
 import Foundation
-
 func solution(_ a:[Int], _ b:[Int]) -> Int {
     var result = 0
     let aa = a.sorted(by: <)
     let bb = b.sorted(by: <)
-    
-    for i in 0..<a.count{
-        if aa[i] < bb[i]{
+    var aIndex = 0
+    var bIndex = 0
+    if aa[0] > bb[bb.count - 1]{
+        return 0
+    }
+    while aIndex < a.count, bIndex < b.count{
+        if aa[aIndex] < bb[bIndex]{
             result += 1
+            aIndex += 1
+            bIndex += 1
+        }else if aa[aIndex] >= bb[bIndex]{
+            bIndex += 1
         }
     }
-    
     
     return result
 }
