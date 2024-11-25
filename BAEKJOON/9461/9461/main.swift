@@ -2,33 +2,24 @@
 //  main.swift
 //  9461
 //
-//  Created by 유현진 on 2022/03/07.
+//  Created by 유현진 on 11/25/24.
 //
 
 import Foundation
 
 func solution(){
     let T = Int(readLine()!)!
-    var m = [Int]()
-    m.append(1)
-    m.append(1)
-    m.append(1)
-    m.append(2)
-    m.append(2)
-    
+    var m = [1, 1, 1, 2, 2, 3]
     for _ in 0..<T{
-        fib()
-    }
-    
-    func fib(){
         let N = Int(readLine()!)!
-        let count = m.count
-        if N>count{
-            for i in count..<N{
-                m.append(m[i-1]+m[i-5])
+        if N > m.count{
+            for i in m.count..<N{
+                m.append(m[i-1] + m[i-5])
             }
+            print(m[N-1])
+        }else{
+            print(m[N-1])
         }
-        print(m[N-1])
     }
 }
 solution()
