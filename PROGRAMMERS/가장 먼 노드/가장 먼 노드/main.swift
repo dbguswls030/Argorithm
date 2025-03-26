@@ -2,42 +2,58 @@
 //  main.swift
 //  가장 먼 노드
 //
-//  Created by 유현진 on 2023/03/28.
+//  Created by 유현진 on 3/26/25.
 //
 
 import Foundation
 
 func solution(_ n:Int, _ edge:[[Int]]) -> Int {
-    var v = Array(repeating: [Int](), count: n+1)
-    var visited = Array(repeating: 0, count: n+1)
-    var dept = 0
-    var queue = [1]
-    func bfs(q: [Int]){
-        queue.removeAll()
-        for start in q{
-            for i in v[start]{
-                if visited[i] == 0{
-                    queue.append(i)
-                    visited[i] = dept
+    var map = Array(repeating: [Int](), count: n)
+    var visited = Array(repeating: false, count: n)
+    var result = 0
+    for e in edge{
+        let start = e[0] - 1
+        let end = e[1] - 1
+        map[start].append(end)
+        map[end].append(start)
+    }
+    
+    func bfs(queue: [Int]){
+        var queue = queue
+        
+        while !queue.isEmpty{
+            var newQueue = [Int]()
+            
+            var nodeCount = 0
+            for start in queue{
+                for end in map[start]{
+                    if visited[end] == false{
+                        newQueue.append(end)
+                        visited[end] = true
+                        nodeCount += 1
+                    }
                 }
             }
-            v[start].removeAll()
+            if newQueue.isEmpty{
+                break
+            }
+            result = nodeCount
+            queue = newQueue
         }
     }
-    for e in edge{
-        let a = e[0]
-        let b = e[1]
-        v[a].append(b)
-        v[b].append(a)
-    }
-    
-    visited[1] = -1
-    while !queue.isEmpty{
-        dept += 1
-        bfs(q: queue)
-    }
-    
-    return visited.filter{dept - 1 == $0}.count
+    visited[0] = true
+    bfs(queue: [0])
+    return result
 }
 
 print(solution(6, [[3, 6], [4, 3], [3, 2], [1, 3], [1, 2], [2, 4], [5, 2]]))
+print(solution(6, [[3, 6], [4, 3], [3, 2], [1, 3], [1, 2], [2, 4], [5, 2]]), 3)
+print(solution(11, [[1, 2], [1, 3], [2, 4], [2, 5], [3, 5], [
+      3, 6], [4, 8], [4, 9], [5, 9], [5, 10], [6, 10], [6, 11]]), 4)
+print(solution(4, [[1, 2], [2, 3], [3, 4]]), 1)
+print(solution(2, [[1, 2]]), 1)
+print(solution(5, [[4, 3], [3, 2], [1, 3], [1, 2], [2, 4], [5, 2]]), 2)
+print(solution(4, [[1, 2], [1, 3], [2, 3], [2, 4], [3, 4]]), 1)
+print(solution(4, [[1, 4], [1, 3], [2, 3], [2, 1]]), 3)
+print(solution(4, [[3, 4], [1, 3], [2, 3], [2, 1]]), 1)
+print(solution(4, [[4, 3], [1, 3], [2, 3]]), 2)
