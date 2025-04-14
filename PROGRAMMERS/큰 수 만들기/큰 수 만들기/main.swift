@@ -2,28 +2,31 @@
 //  main.swift
 //  큰 수 만들기
 //
-//  Created by 유현진 on 2023/07/29.
+//  Created by 유현진 on 4/14/25.
 //
 
 import Foundation
 
 func solution(_ number:String, _ k:Int) -> String {
-    var stack = [Character]()
     var k = k
-    for n in number{
-        while !stack.isEmpty, Int(String(stack.last!))! < Int(String(n))!, k > 0{
-            k -= 1
-            stack.removeLast()
+    var result = [String]()
+    let numberArray = number.map{ String($0) }
+    
+    for num in numberArray{
+        while !result.isEmpty, Int(result.last!)! < Int(num)!, k > 0{
+            result.removeLast()
+            k-=1
         }
-        stack.append(n)
+        result.append(num)
     }
     while k>0{
         k-=1
-        stack.removeLast()
+        result.removeLast()
     }
-    return String(stack)
+    return result.joined()
 }
 
-print(solution("1924", 2))
-print(solution("1231234", 3))
+//print(solution("1924", 2))
+//print(solution("1231234", 3))
 print(solution("4177252841", 4))
+
